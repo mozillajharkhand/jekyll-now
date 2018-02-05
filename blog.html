@@ -1,0 +1,61 @@
+---
+#Layout
+layout: page
+title: Blog Post
+permalink: /blog/
+
+
+---
+
+<!--<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+			{% assign author = site.data.authors[post.author] %}
+			{% if author %}
+   		<span>Written by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a></span>
+			{% endif %}
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>-->
+
+
+
+
+<div class="posts row-section">
+	<div class="row">
+		<div class="col-md-12 row-block">
+			<ul>
+				{% for post in site.posts %}
+				
+				<li>
+					{% assign author = site.data.authors[post.author] %}
+					{% if author %}
+					<div class="media">
+						<div class="media-left align-self-center">
+							<img class="rounded-circle" src="{{ author.avatar }}">
+						</div>
+						<div class="media-body">
+							<h1>{{ post.title }}</h1>
+
+							
+							<p class="post-info">Posted by <span><a href="{{ author.web }}" target="_blank">{{ author.name }}</a></span> on {{ post.date | date: '%B %d, %Y'}}</p>
+
+							<p>{{ post.excerpt }}</p>
+						</div>
+						<div class="media-right align-self-center">
+								<a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-default">Read More</a>
+							</div>
+					</div>
+					{% endif %}
+				</li>
+
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
