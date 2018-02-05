@@ -72,7 +72,7 @@ kramdown:
 sass:
   load_paths:
         - _sass
-        - _bootstrap
+        - node_modules
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
