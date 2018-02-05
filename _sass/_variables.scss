@@ -1,6 +1,10 @@
 
 //
 // VARIABLES
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
 //
 
 // Colors
@@ -15,8 +19,7 @@ $lightGray: #eee;
 $white: #fff;
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$trebuchetMS: "Trebuchet MS", Helvetica, sans-serif;
 $georgia: Georgia, serif;
 
 // Mobile breakpoints
