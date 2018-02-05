@@ -7,6 +7,8 @@
 
 @import "reset";
 @import "variables";
+@import "custom";
+@import "bootstrap/scss/bootstrap";
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -19,19 +21,19 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 18px/1.4 $trebuchetMS;
   color: $darkGray;
 }
 
-.container {
+/*.container {
   margin: 0 auto;
   max-width: 740px;
   padding: 0 10px;
   width: 100%;
-}
+}*/
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: $trebuchetMS;
   color: $darkerGray;
   font-weight: bold;
 
@@ -194,7 +196,7 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: $trebuchetMS;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -213,7 +215,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: $trebuchetMS;
   font-size: 18px;
 
   @include mobile {
