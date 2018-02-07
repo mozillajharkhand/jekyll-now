@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+{% assign author = site.data.authors[page.author] %}
+{% if author %}
+
+<article class="post">
+	<h1>{{ page.title }}</h1>
+
+	<div class="date">
+
+		Written by <span><a href="{{ author.web }}">{{ author.name }}</a></span> on {{ page.date | date: "%B %e, %Y" }}
+	</div>
+
+	<div class="entry">
+		{{ content }}
+	</div>
+	<hr class="text-muted">
+
+
+
+
+<!-- author details -->
+
+		<div class="row margin-top-medium">
+			<div class="col-md-12 row-block" id="box">
+				<div class="media">
+					<div class="media-left align-self-center">
+						<img id="author-avatar" class="rounded-circle" src="{{ author.avatar }}">
+					</div>
+					<div class="media-body">
+						<div class="my-auto">
+							<h1 class="">{{ author.name }}</h1>
+							<div class="subheading"> 
+								<img id="placeholder" src="{{ base.url }}/images/placeholder.svg" />{{ author.place }}
+								<a href="mailto:{{ author.email }}"> 
+									<img id="mailbox" src="{{ base.url }}/images/mail.svg" />{{ author.email }}
+								</a>
+								<a href="{{ author.mozillian }}" target="_blank"><img id="mailbox" src="{{ base.url }}/images/mozillians-logo.png" /></a>
+							</div>
+							<p class="">{{ author.bio }}</p>
+							<ul class="list-inline list-social-icons mb-3">
+								<li class="list-inline-item">
+										<a href="{{ author.github }}" target="_blank"><i class="svg-icon github"></i></a>
+								</li>
+								<li class="list-inline-item">
+										<a href="{{ author.facebook }}" target="_blank"><i class="svg-icon facebook"></i></a>
+								</li>
+								<li class="list-inline-item">
+										<a href="{{ author.twitter }}" target="_blank"><i class="svg-icon twitter"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+
+
+
+{% endif %}
+
+{% include disqus.html %}
+</article>
